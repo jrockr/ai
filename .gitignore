@@ -127,3 +127,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/simplilearn-ml-project/Projects/Course End Projects/Project 9.1 - Uber Fare Prediction/data/train.csv
