@@ -14,7 +14,6 @@ from sklearn.preprocessing import StandardScaler
 import numpy as np
 import xgboost as xgb
 from sklearn.metrics import r2_score
-from sklearn.metrics import mean_squared_error
 
 #load test and train data 
 
@@ -83,6 +82,7 @@ xgb_params = {
 }
 dtrain = xgb.DMatrix(X_train, y_train, feature_names=X_train.columns.values)
 model = xgb.train(dict(xgb_params, silent=0), dtrain, num_boost_round=100, feval=r2_score, maximize=True)
+
 
 # plot the important features #
 fig, ax = plt.subplots(figsize=(10,20))
